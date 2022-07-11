@@ -3,6 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;700&display=swap');
 
+@font-face {
+    font-family: 'Recipekorea';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /*-----------------------------------------------------------
 
     1.  Variables
@@ -605,6 +611,11 @@ legend {
   /* 1 */
 }
 
+body{overflow: hidden;}
+::-webkit-scrollbar {
+    display: none;
+}
+
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
@@ -704,6 +715,21 @@ template {
 /* -------------------------------------------------------
                      helpers
 -------------------------------------------------------- */
+.d-flex {
+  display: flex;
+}
+.jusify-content-center{
+  justify-content: center;
+}
+.align-items-center{
+  align-items: center;
+}
+.d-column {
+  display: flex;
+  flex-flow: column;
+}
+
+
 .display-table-cell {
   display: table-cell !important;
 }
@@ -1252,6 +1278,10 @@ template {
 
 .w-100 {
   width: 100% !important;
+}
+
+.w-50 {
+  width: 50% !important;
 }
 
 .h-100 {
@@ -2705,7 +2735,7 @@ input[type="submit"] {
   position: relative;
   width: auto;
   color: #fff;
-  background-color: #090909;
+  background-color: #333;
   -moz-appearance: none;
   border: none;
   -webkit-appearance: none;
@@ -9959,16 +9989,20 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   position: absolute;
   top: 50%;
   left: 50%;
-  top: 50%;
+  top: 48%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 2;
   pointer-events: none;
+  overflow: auto;
 }
 
 .dsn-slider-content .slide-content .slide-content-inner {
   /*padding-left: 12.5vw;*/
+    max-height: 70vh;
+    width: 80vw;
+    padding: 0 1rem;
 }
 
 .dsn-slider-content .slide-content .slide-content-inner .title-text-header {
@@ -9999,7 +10033,8 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 }
 
 .dsn-slider-content .slide-content .slide-content-inner .title-text-header .title-text-header-inner span {
-  font-weight: 600;
+  font-family: 'Recipekorea';
+  font-size: 1.7rem;
   letter-spacing: -0.01em;
   line-height: 0.75em;
   white-space: nowrap;
@@ -10008,7 +10043,6 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   -ms-user-select: none;
   user-select: none;
 }
-
 .dsn-slider-content .slide-content .slide-content-inner p {
   max-width: 470px;
   font-weight: 600;
@@ -10114,6 +10148,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 
 .dsn-slider-content .slide-content .slide-content-inner p,
 .dsn-slider-content .slide-content.dsn-active-cat .slide-content-inner button,
+.dsn-slider-content .slide-content .slide-content-inner div,
 .dsn-slider-content .slide-content .slide-content-inner .link-custom,
 .dsn-slider-content .slide-content .slide-content-inner .project-metas .project-meta-box {
   opacity: 0;
@@ -10133,6 +10168,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+
 .dsn-slider-content .slide-content .slide-content-inner .project-metas .project-meta-box {
   -webkit-transform: translateY(-10%);
   -ms-transform: translateY(-10%);
@@ -10150,6 +10186,11 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
   -o-transition-delay: 0.35s;
   transition-delay: 0.35s;
 }
+.dsn-slider-content .slide-content .slide-content-inner table {
+  -webkit-transition-delay: 0.55s;
+  -o-transition-delay: 0.55s;
+  transition-delay: 0.55s;
+}
 
 .dsn-slider-content .slide-content .slide-content-inner .link-custom {
   -webkit-transition-delay: 0.3s;
@@ -10159,12 +10200,16 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 
 .dsn-slider-content .slide-content.dsn-active-cat .slide-content-inner p,
 .dsn-slider-content .slide-content.dsn-active-cat .slide-content-inner button,
+.dsn-slider-content .slide-content.dsn-active-cat .slide-content-inner div,
 .dsn-slider-content .slide-content.dsn-active-cat .slide-content-inner .link-custom,
 .dsn-slider-content .slide-content.dsn-active-cat .slide-content-inner .project-metas .project-meta-box {
   opacity: 1;
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
+  font-family: 'NOTO SANS KR';
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .view-all {
@@ -11725,6 +11770,8 @@ body.dsn-show-work .dsn-all-work .list-main:nth-of-type(20) .work-item {
   display: none;
 }
 
+
+
 /* -------------------------------------------------------
                   contact
 -------------------------------------------------------- */
@@ -12589,7 +12636,10 @@ footer .copyright-social ul li:last-child {
   padding: .7rem 2rem;
   border-radius: 5rem;
   min-width: 600px;
+  max-width: 600px;
   color: #fff;
+  margin: auto;
+  font-family: 'Montserrat', 'Noto Sans KR';
 }
 
 .link-custom input::placeholder {
@@ -12619,6 +12669,7 @@ footer .copyright-social ul li:last-child {
   margin: 3rem 0 -1rem 0;
   text-align: center;
   max-width: none !important;
+  white-space: pre-line;
 }
 
 .mb-2 {
@@ -12638,4 +12689,78 @@ footer .copyright-social ul li:last-child {
 }
 .btn-dark:hover {
   color: #333;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.text-accent {
+  color: #7bf9f8;
+}
+
+.w-menu {
+  align-items: center;
+  margin-top: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.w-menu a {
+  margin-left: 2rem;
+}
+
+.w-menu a:hover {
+  font-weight: bold;
+}
+
+.labeltext table {
+  width: 100%;
+  border-bottom: 1px solid #444;
+  max-width: 55vw;
+  margin: auto;
+}
+
+.labeltext table th, .labeltext table td {
+  border-top: 1px solid #444;
+  padding: .5rem;
+}
+
+.font-reco {
+  font-family: 'Recipekorea' !important;
+}
+
+.bordergray {
+  border:  1px solid #444;
+  border-radius: 10px;
+  padding: 2rem 2rem 4rem 2rem;
+  width: 27vw;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.w-hidden {
+  display: none;
+}
+.m-hidden {
+  display: block;
+}
+
+@media(max-width: 600px) {
+  .w-hidden {
+    display: block;
+  }
+  .m-hidden {
+    display: none;
+  }
 }
