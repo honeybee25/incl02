@@ -12977,6 +12977,13 @@ input::-webkit-inner-spin-button {
   margin: auto;
 }
 
+.pagenation{
+  margin-top: .5rem;
+}
+.pagenation a{
+  padding: 1rem;
+  cursor: pointer;
+}
 
 
 
