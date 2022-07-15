@@ -12895,6 +12895,16 @@ input::-webkit-inner-spin-button {
   .dsn-slider-content .slide-content .slide-content-inner {
     width: 100%;
   }
+  .labeltext table{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .labeltext table th, .labeltext table td{
+    font-size: .9rem;
+  }
+  .sm-ml-0{
+    margin-left: 0 !important;
+  }
 
 
 }
@@ -13002,6 +13012,7 @@ input::-webkit-inner-spin-button {
   .btn-dark {
     min-width: 40%;
     margin: .5rem;
+    padding: 1.5rem !important;
   }
   .dsn-slider .footer-slid {
     height: 5.5rem;
@@ -13016,8 +13027,24 @@ input::-webkit-inner-spin-button {
   .sm-w-100{
     width: 100% !important;
   }
+  .sm-mt-1{
+    margin-top: 1rem !important;
+  }
+  .sm-mt-2{
+    margin-top: 2rem !important;
+  }
   .sm-mt-4{
     margin-top: 4rem !important;
+  }
+  .sm-mx-0{
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .sm-pt-1{
+    padding-top: 1rem !important;
+  }
+  .iconimg{
+    width: 70px;
   }
   .modal_body {
     width: 90vw;
