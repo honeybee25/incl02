@@ -12708,6 +12708,8 @@ footer .copyright-social ul li:last-child {
   text-align: center;
 }
 
+/* 220922 수정 */
+
 .link-custom input, .select {
   text-align: center;
   font-size: 1.5rem;
@@ -12748,6 +12750,7 @@ select {
   background:url('../img/select-arrow.png') no-repeat right 9px center;
 }
 
+/* 220922 수정 end */
 
 
 @media(max-width: 600px){
