@@ -2666,9 +2666,11 @@ body > * {
 
 input,
 textarea,
+select
 .form-control,
 .form-box input,
-.form-box textarea {
+.form-box textarea
+ {
   background-color: transparent;
   border: none;
   -webkit-box-flex: 1;
@@ -12706,7 +12708,7 @@ footer .copyright-social ul li:last-child {
   text-align: center;
 }
 
-.link-custom input {
+.link-custom input, .select {
   text-align: center;
   font-size: 1.5rem;
   border: 1px solid #ddd;
@@ -12722,6 +12724,30 @@ footer .copyright-social ul li:last-child {
 .link-custom input::placeholder {
   font-size: 1.2rem;
 }
+
+.select {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+
+.select option {
+  text-align: center;
+  background-color: rgba(0, 0, 0, .8);
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  color: #fff;
+  margin: auto;
+  font-family: 'Montserrat', 'Noto Sans KR';
+}
+
+select {appearance:none;}
+
+select {
+  background:url('../img/select-arrow.png') no-repeat right 9px center;
+}
+
 
 
 @media(max-width: 600px){
